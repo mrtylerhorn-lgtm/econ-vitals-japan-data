@@ -17,6 +17,8 @@ def get(url):
             with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=60) as r:
                 return r.status, r.read()
         except urllib.error.HTTPError as e:
+            if e.code in (429, 500, 502, 503, 504) and attempt < 2:
+                time.sleep(10 * (attempt + 1)); err = e; continue
             return e.code, b''
         except Exception as e:
             err = e; time.sleep(3)
@@ -35,6 +37,7 @@ for step in plan['steps']:
             c, cy, sa = url.split('|')
             url = f'/api/1.0/Json/getData?Lang=EN&IndicatorCode={c}&RegionalRank=2&Cycle={cy}&IsSeasonalAdjustment={sa}'
         full = urljoin(step['page'], url)
+        time.sleep(0.5)
         try:
             status, body = get(full)
         except Exception as e:
@@ -50,6 +53,14 @@ for step in plan['steps']:
             arr = j.get('GET_STATS', {}).get('STATISTICAL_DATA', {}).get('DATA_INF', {}).get('DATA_OBJ', [])
             arr = arr if isinstance(arr, list) else [arr]
             body = json.dumps([[o['VALUE']['@time'], o['VALUE']['$']] for o in arr if o['VALUE']['@time'] >= '2012']).encode()
+        elif mode == 'ust10':
+            import csv, io
+            rows = list(csv.reader(io.StringIO(body.decode('utf-8-sig', 'replace'))))
+            hdr = [h.strip().strip('"') for h in rows[0]]; di, ti = hdr.index('Date'), hdr.index('10 Yr')
+            out = [f"{r[di][6:10]}-{r[di][0:2]}-{r[di][3:5]},{r[ti]}" for r in rows[1:] if len(r) > ti and r[ti].strip()]
+            out.sort()
+            with open(os.path.join(raw, src, it['key']), 'a') as f: f.write('\n'.join(out) + '\n')
+            ok += 1; continue
         open(os.path.join(raw, src, it['key']), 'wb').write(body)
         ok += 1
     report[src] = {'ok': ok, 'missing': missing}

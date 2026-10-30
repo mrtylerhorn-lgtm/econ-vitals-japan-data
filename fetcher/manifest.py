@@ -84,7 +84,7 @@ plan = [
         {'url': '/english/policy/jgbs/reference/interest_rate/jgbcme.csv', 'key': 'jgb_month', 'mode': 'lines', 're': '^(Date|20)'}]),
     ('jil', 'https://www.jil.go.jp/english/estatis/eshuyo/index.html', [{'url': '/english/estatis/eshuyo/e0208.html', 'key': 'jobs_ratio', 'mode': 'raw'}]),
     ('nikkei', 'https://indexes.nikkei.co.jp/en/nkave/archives/data', [{'url': '/nkave/historical/nikkei_stock_average_daily_en.csv', 'key': 'nikkei', 'mode': 'lines', 're': f'^(Date|"{Y-1}/|"{Y}/)'}]),
-    ('fred', 'https://fred.stlouisfed.org/', [{'url': f'/graph/fredgraph.csv?id=DGS10&cosd={Y-2}-01-01', 'key': 'dgs10', 'mode': 'raw'}]),
+    ('ust', 'https://home.treasury.gov/', [{'url': f'/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/{y}/all?type=daily_treasury_yield_curve&field_tdr_date_value={y}&page&_format=csv', 'key': 'us10y', 'mode': 'ust10'} for y in (Y - 2, Y - 1, Y)]),
 ]
 
 TEMPLATE = r"""const SRC = %(src)s;
