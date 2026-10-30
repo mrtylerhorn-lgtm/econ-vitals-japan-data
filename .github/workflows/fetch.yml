@@ -1,0 +1,72 @@
+name: Econ Vitals Japan fetch
+
+# Downloads the raw files for the Econ Vitals Japan dashboard from the official
+# sources and commits them to data/. The Claude scheduled task (Saturdays 11:23 JST)
+# pulls this repo, builds the datasets and publishes them to the dashboard.
+
+on:
+  schedule:
+    - cron: '7 1 * * 6'        # Saturdays 10:07 JST (01:07 UTC)
+  workflow_dispatch:            # "Run workflow" button on the Actions tab
+  push:
+    branches: [main]
+    paths: ['fetcher/**', '.github/workflows/**']   # test run whenever the downloader changes
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Download from the official sources
+        id: fetch
+        run: |
+          TODAY=$(TZ=Asia/Tokyo date +%F)
+          rm -rf run raw-new
+          python3 fetcher/manifest.py run "$TODAY" > /dev/null
+          set +e
+          python3 fetcher/fetch.py run/plan.json raw-new > fetch-report.json
+          echo "code=$?" >> "$GITHUB_OUTPUT"
+          echo "today=$TODAY" >> "$GITHUB_OUTPUT"
+          cat fetch-report.json
+
+      - name: Save the files and a status note
+        run: |
+          OK=$([ "${{ steps.fetch.outputs.code }}" = "0" ] && echo true || echo false)
+          # Only replace last week's files when every source answered; the status note is always written.
+          if [ "$OK" = "true" ]; then rm -rf data && mv raw-new data; fi
+          python3 - "$OK" "${{ steps.fetch.outputs.today }}" <<'PY'
+          import hashlib, json, sys, datetime
+          ok, today = sys.argv[1] == 'true', sys.argv[2]
+          sha = {f: hashlib.sha256(open('fetcher/' + f, 'rb').read()).hexdigest() for f in ('manifest.py', 'fetch.py')}
+          json.dump({'run_date_jst': today, 'finished_utc': datetime.datetime.now(datetime.timezone.utc).isoformat(timespec='seconds'),
+                     'ok': ok, 'data_replaced': ok, 'report': json.load(open('fetch-report.json')), 'code_sha256': sha},
+                    open('status.json', 'w'), indent=1)
+          PY
+          cat status.json
+
+      - name: Commit
+        run: |
+          git config user.name 'econ-vitals-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add -A .
+          git commit -m "Fetch $(TZ=Asia/Tokyo date +%F): ok=$(python3 -c "import json;print(json.load(open('status.json'))['ok'])")" || echo 'nothing to commit'
+          git push
+
+      - name: Fail the run if a source was unreachable
+        if: steps.fetch.outputs.code != '0'
+        run: |
+          echo 'At least one source returned nothing; see fetch-report above. Last good data was kept.'
+          exit 1
