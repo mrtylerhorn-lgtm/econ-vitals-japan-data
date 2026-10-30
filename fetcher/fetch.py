@@ -25,8 +25,7 @@ def get(url):
             err = e; time.sleep(3)
     raise err
 
-report, failed = {}, False
-for step in plan['steps']:
+def run(step):
     src = step['src']; os.makedirs(os.path.join(raw, src), exist_ok=True)
     ok, missing, unreachable, streak, t0 = 0, [], False, 0, time.time()
     for it in step['items']:
@@ -66,7 +65,14 @@ for step in plan['steps']:
             ok += 1; continue
         open(os.path.join(raw, src, it['key']), 'wb').write(body)
         ok += 1
-    report[src] = {'ok': ok, 'missing': missing}
-    if ok == 0: failed = True
+    return {'ok': ok, 'missing': missing}
+
+report = {s['src']: run(s) for s in plan['steps']}
+retry = [s for s in plan['steps'] if report[s['src']]['ok'] == 0]
+if retry:  # a server that was busy often answers a little later; try once more
+    time.sleep(600)
+    for s in retry:
+        r = run(s); r['retried'] = True; report[s['src']] = r
+failed = any(r['ok'] == 0 for r in report.values())
 print(json.dumps(report, indent=1))
 sys.exit(1 if failed else 0)
