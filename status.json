@@ -1,6 +1,6 @@
 {
  "run_date_jst": "2026-10-30",
- "finished_utc": "2026-10-30T02:21:04+00:00",
+ "finished_utc": "2026-10-30T02:33:17+00:00",
  "ok": false,
  "data_replaced": false,
  "report": {
@@ -30,8 +30,11 @@
    "missing": []
   },
   "bojapi": {
-   "ok": 6,
-   "missing": []
+   "ok": 4,
+   "missing": [
+    "sppi:503",
+    "tankan:503"
+   ]
   },
   "mof": {
    "ok": 2,
@@ -54,6 +57,6 @@
  },
  "code_sha256": {
   "manifest.py": "b94ec3a1168c567d57d38ad65121efa0b93df7f5b75509afafcc7037604dc8a6",
-  "fetch.py": "3c636155fa8a9fe54b744082cdee57cd31edecef1919cff9c39c76da41520ee6"
+  "fetch.py": "476696e0c9129b69497caac3de3f2c22cbb07ce9faf609036ac739d86b72a3cf"
  }
 }
