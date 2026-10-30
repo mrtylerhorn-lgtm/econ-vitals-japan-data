@@ -1,6 +1,6 @@
 {
  "run_date_jst": "2026-10-30",
- "finished_utc": "2026-10-30T11:31:48+00:00",
+ "finished_utc": "2026-10-30T11:51:56+00:00",
  "ok": true,
  "data_replaced": true,
  "stale_sources": [
@@ -48,7 +48,8 @@
     "ci_lead:skipped",
     "bankrupt:skipped",
     "hours_ft_yy:skipped"
-   ]
+   ],
+   "retried": true
   },
   "calendar": {
    "ok": 1,
@@ -100,6 +101,6 @@
  },
  "code_sha256": {
   "manifest.py": "7c1c2a9d222d7592f589850e28154c7b013e74c031866ab295fdaa87c9b333a9",
-  "fetch.py": "be59ef70b91ee0337a81f4497545ed9177a60faa543e505048817413de6d8b5b"
+  "fetch.py": "a8be57c2fc3f216ed6b6573b042450dd550d90f8711649f11e829cfb08ac1223"
  }
 }
