@@ -5285,8 +5285,6 @@ window.addEventListener('DOMContentLoaded', function () {
 <h2>統計データの活用</h2>
 
 <ul>
-	<li><a href="https://dashboard.e-stat.go.jp/" rel="noopener" tabindex="1011" target="_blank">グラフ(統計ダッシュボード)</a></li>
-	<li><a href="https://dashboard.e-stat.go.jp/timeSeries" rel="noopener" tabindex="1011" target="_blank">時系列表(統計ダッシュボード)</a></li>
 	<li><a href="/gis" tabindex="1012">統計地理情報システム</a></li>
 	<li><a href="/gis/statmap-search?type=1" tabindex="1013">統計データダウンロード</a></li>
 	<li><a href="/gis/statmap-search?type=2" tabindex="1014">境界データダウンロード</a></li>
