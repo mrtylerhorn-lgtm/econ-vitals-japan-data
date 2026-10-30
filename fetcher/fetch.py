@@ -12,9 +12,9 @@ plan = json.load(open(sys.argv[1])); raw = sys.argv[2]
 UA = {'User-Agent': 'Mozilla/5.0 (EconVitalsJapan weekly updater)'}
 
 def get(url):
-    for attempt in range(2):
+    for attempt in range(3):
         try:
-            with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=20) as r:
+            with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=60) as r:
                 return r.status, r.read()
         except urllib.error.HTTPError as e:
             return e.code, b''
