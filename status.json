@@ -1,8 +1,8 @@
 {
  "run_date_jst": "2026-10-30",
- "finished_utc": "2026-10-30T02:33:17+00:00",
- "ok": false,
- "data_replaced": false,
+ "finished_utc": "2026-10-30T02:36:23+00:00",
+ "ok": true,
+ "data_replaced": true,
  "report": {
   "estat": {
    "ok": 37,
@@ -30,11 +30,8 @@
    "missing": []
   },
   "bojapi": {
-   "ok": 4,
-   "missing": [
-    "sppi:503",
-    "tankan:503"
-   ]
+   "ok": 6,
+   "missing": []
   },
   "mof": {
    "ok": 2,
@@ -48,15 +45,13 @@
    "ok": 1,
    "missing": []
   },
-  "fred": {
-   "ok": 0,
-   "missing": [
-    "dgs10:TimeoutError"
-   ]
+  "ust": {
+   "ok": 3,
+   "missing": []
   }
  },
  "code_sha256": {
-  "manifest.py": "b94ec3a1168c567d57d38ad65121efa0b93df7f5b75509afafcc7037604dc8a6",
-  "fetch.py": "476696e0c9129b69497caac3de3f2c22cbb07ce9faf609036ac739d86b72a3cf"
+  "manifest.py": "4416675c68a1801950e3c3d3ec118674f52db5ea26ee233581379e1258046cb0",
+  "fetch.py": "30fe591a85b50bc6e15ea99ddb45383fa549084005201fdc14d6efee65d21d11"
  }
 }
