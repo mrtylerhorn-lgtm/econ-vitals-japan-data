@@ -48,17 +48,30 @@ jobs:
           python3 fetcher/convert.py raw-new
 
       - name: Save the files and a status note
+        id: save
         run: |
-          OK=$([ "${{ steps.fetch.outputs.code }}" = "0" ] && echo true || echo false)
-          # Only replace last week's files when every source answered; the status note is always written.
-          if [ "$OK" = "true" ]; then rm -rf data && mv raw-new data; fi
-          python3 - "$OK" "${{ steps.fetch.outputs.today }}" <<'PY'
-          import hashlib, json, sys, datetime
-          ok, today = sys.argv[1] == 'true', sys.argv[2]
+          python3 - "${{ steps.fetch.outputs.today }}" <<'PY'
+          # A source that returned nothing keeps last week's files (marked stale) so one
+          # outage doesn't freeze the whole dashboard. Data is replaced only if every
+          # source is either fresh or has a previous copy to fall back on.
+          import hashlib, json, os, shutil, sys, datetime
+          today = sys.argv[1]
+          report = json.load(open('fetch-report.json'))
+          stale = sorted(s for s, v in report.items() if v['ok'] == 0)
+          ok = True
+          for s in stale:
+              if os.path.isdir(os.path.join('data', s)):
+                  shutil.rmtree(os.path.join('raw-new', s), ignore_errors=True)
+                  shutil.copytree(os.path.join('data', s), os.path.join('raw-new', s))
+              else:
+                  ok = False
+          if ok:
+              shutil.rmtree('data', ignore_errors=True); shutil.move('raw-new', 'data')
           sha = {f: hashlib.sha256(open('fetcher/' + f, 'rb').read()).hexdigest() for f in ('manifest.py', 'fetch.py')}
           json.dump({'run_date_jst': today, 'finished_utc': datetime.datetime.now(datetime.timezone.utc).isoformat(timespec='seconds'),
-                     'ok': ok, 'data_replaced': ok, 'report': json.load(open('fetch-report.json')), 'code_sha256': sha},
+                     'ok': ok, 'data_replaced': ok, 'stale_sources': stale, 'report': report, 'code_sha256': sha},
                     open('status.json', 'w'), indent=1)
+          open(os.environ['GITHUB_OUTPUT'], 'a').write(f"ok={'true' if ok else 'false'}\nstale={' '.join(stale)}\n")
           PY
           cat status.json
 
@@ -70,8 +83,8 @@ jobs:
           git commit -m "Fetch $(TZ=Asia/Tokyo date +%F): ok=$(python3 -c "import json;print(json.load(open('status.json'))['ok'])")" || echo 'nothing to commit'
           git push
 
-      - name: Fail the run if a source was unreachable
+      - name: Flag stale or failed sources
         if: steps.fetch.outputs.code != '0'
         run: |
-          echo 'At least one source returned nothing; see fetch-report above. Last good data was kept.'
-          exit 1
+          echo "::warning::Sources that returned nothing this run (last week's files kept): ${{ steps.save.outputs.stale }}"
+          if [ "${{ steps.save.outputs.ok }}" != "true" ]; then echo 'A source failed and had no earlier copy; data not replaced.'; exit 1; fi
