@@ -31,6 +31,7 @@ ESTAT = {
     'prim_q': ('1601010102000010010', 2, 1), 'sec_q': ('1601010103000010010', 2, 1), 'fa_q': ('1601010300000010010', 2, 1),
     'm2_yy': ('0702010200000030010', 1, 1), 'ci_coin': ('0706010500000090010', 1, 1), 'ci_lead': ('0706010500000090020', 1, 1),
     'bankrupt': ('0701060100000010010', 1, 1),
+    'hours_ft_yy': ('0302010000000130010', 1, 1),
 }
 def estat_url(code, cy, sa):
     return f'/api/1.0/Json/getData?Lang=EN&IndicatorCode={code}&RegionalRank=2&Cycle={cy}&IsSeasonalAdjustment={sa}'
@@ -61,6 +62,7 @@ def esri_candidates():
                 base = f'/jp/sna/data/data_list/sokuhou/files/{diry}/qe{yy}{q}{suf}/tables/'
                 urls.append(base + f'gaku-jk{yy}{q}{est}.csv')
                 urls.append(base + f'gaku-mk{yy}{q}{est}.csv')
+                urls.append(base + f'kshotoku-q{yy}{q}{est}.csv')
     return urls
 
 cal_end = today + timedelta(days=50)
@@ -68,7 +70,8 @@ plan = [
     ('estat', 'https://dashboard.e-stat.go.jp/en/', [{'url': f'{v[0]}|{v[1]}|{v[2]}', 'key': k, 'mode': 'estat'} for k, v in ESTAT.items()]),
     ('calendar', 'https://www.e-stat.go.jp/en/release-calendar', [{'url': f'/release-calendar?startYear={today.year}&startMonth={today.month}&startDay={today.day}&endYear={cal_end.year}&endMonth={cal_end.month}&endDay={cal_end.day}&page=1', 'key': 'calendar', 'mode': 'raw'}]),
     ('esri', 'https://www.esri.cao.go.jp/en/sna/data/sokuhou/files/toukei_top.html', [{'url': u, 'key': u.split('/')[-1] + '@' + u.split('/')[-3], 'mode': 'raw'} for u in esri_candidates()]),
-    ('statjp', 'https://www.stat.go.jp/english/data/cpi/1581-z.html', [{'url': '/data/cpi/2025/csv/zmi2025aa.csv', 'key': 'cpi_items', 'mode': 'raw'}]),
+    ('statjp', 'https://www.stat.go.jp/english/data/cpi/1581-z.html', [{'url': '/data/cpi/2025/csv/zmi2025aa.csv', 'key': 'cpi_items', 'mode': 'raw'},
+                {'url': '/data/cpi/2025/csv/tmi2025aa.csv', 'key': 'cpi_tokyo', 'mode': 'raw'}]),
     ('boj', 'https://www.boj.or.jp/en/index.htm', [
         {'url': '/en/research/research_data/cpi/cpirev.xlsx', 'key': 'cpirev', 'mode': 'raw'},
         {'url': '/en/mopo/mpmsche_minu/index.htm', 'key': 'mpm_schedule', 'mode': 'raw'}]),
@@ -84,6 +87,7 @@ plan = [
         {'url': '/english/policy/jgbs/reference/interest_rate/jgbcme.csv', 'key': 'jgb_month', 'mode': 'lines', 're': '^(Date|20)'}]),
     ('jil', 'https://www.jil.go.jp/english/estatis/eshuyo/index.html', [{'url': '/english/estatis/eshuyo/e0208.html', 'key': 'jobs_ratio', 'mode': 'raw'}]),
     ('nikkei', 'https://indexes.nikkei.co.jp/en/nkave/archives/data', [{'url': '/nkave/historical/nikkei_stock_average_daily_en.csv', 'key': 'nikkei', 'mode': 'lines', 're': f'^(Date|"{Y-1}/|"{Y}/)'}]),
+    ('watcher', 'https://www5.cao.go.jp/keizai3/watcher-e/index-e.html', [{'url': '/keizai3/watcher-e/di.xls', 'key': 'di.xls', 'mode': 'raw'}]),
     ('ust', 'https://home.treasury.gov/', [{'url': f'/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/{y}/all?type=daily_treasury_yield_curve&field_tdr_date_value={y}&page&_format=csv', 'key': 'us10y', 'mode': 'ust10'} for y in (Y - 2, Y - 1, Y)]),
 ]
 
@@ -126,7 +130,7 @@ steps = []
 for i, (src, page, items) in enumerate(plan, 1):
     path = os.path.join(out, f'{i:02d}_{src}.js')
     compact = [[it['key'], it['url']] + ([it['mode']] if it['mode'] != 'raw' or it.get('re') else []) + ([it['re']] if it.get('re') else []) for it in items]
-    open(path, 'w').write(TEMPLATE % {'src': json.dumps(src), 'items': json.dumps(compact, ensure_ascii=False, separators=(',', ':')), 'maxok': 2 if src == 'esri' else 999})
-    steps.append({'src': src, 'page': page, 'snippet': path, 'items': items, 'max_ok': 2 if src == 'esri' else 999})
+    open(path, 'w').write(TEMPLATE % {'src': json.dumps(src), 'items': json.dumps(compact, ensure_ascii=False, separators=(',', ':')), 'maxok': 3 if src == 'esri' else 999})
+    steps.append({'src': src, 'page': page, 'snippet': path, 'items': items, 'max_ok': 3 if src == 'esri' else 999})
 json.dump({'date': today.isoformat(), 'steps': steps}, open(os.path.join(out, 'plan.json'), 'w'), indent=1)
 for s in steps: print(s['src'], s['page'], s['snippet'])

@@ -42,6 +42,11 @@ jobs:
           echo "today=$TODAY" >> "$GITHUB_OUTPUT"
           cat fetch-report.json
 
+      - name: Convert spreadsheets (.xls to JSON)
+        run: |
+          pip install --quiet xlrd==2.0.1
+          python3 fetcher/convert.py raw-new
+
       - name: Save the files and a status note
         run: |
           OK=$([ "${{ steps.fetch.outputs.code }}" = "0" ] && echo true || echo false)
