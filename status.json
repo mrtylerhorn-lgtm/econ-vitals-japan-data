@@ -1,28 +1,69 @@
 {
  "run_date_jst": "2026-10-30",
- "finished_utc": "2026-10-30T02:36:23+00:00",
- "ok": true,
- "data_replaced": true,
+ "finished_utc": "2026-10-30T11:15:38+00:00",
+ "ok": false,
+ "data_replaced": false,
  "report": {
   "estat": {
-   "ok": 37,
-   "missing": []
+   "ok": 0,
+   "missing": [
+    "cpi_yy:502",
+    "cpi_core_yy:502",
+    "cpi_cc_yy:502",
+    "cpi_xfe_yy:502",
+    "cpi_sa:502",
+    "cpi_core_sa:502",
+    "cpi_cc_sa:502",
+    "ur:502",
+    "emp:502",
+    "unemp:502",
+    "nilf:502",
+    "nonreg:502",
+    "tce_yy:502",
+    "sched_yy:502",
+    "sched_ft_yy:502",
+    "tce_ft_yy:502",
+    "realw_yy:502",
+    "ip:502",
+    "tert:502",
+    "retail:502",
+    "mach:502",
+    "hstarts_saar:502",
+    "hh_real_yy:502",
+    "hcti_real:502",
+    "gdp_r_ann:502",
+    "gdp_defl:502",
+    "gdp_n_nsa:502",
+    "ca_q:502",
+    "goods_q:502",
+    "serv_q:502",
+    "prim_q:502",
+    "sec_q:502",
+    "fa_q:502",
+    "m2_yy:502",
+    "ci_coin:502",
+    "ci_lead:502",
+    "bankrupt:502",
+    "hours_ft_yy:502"
+   ]
   },
   "calendar": {
    "ok": 1,
    "missing": []
   },
   "esri": {
-   "ok": 2,
+   "ok": 3,
    "missing": [
     "gaku-jk2632.csv@qe263_2:404",
     "gaku-mk2632.csv@qe263_2:404",
+    "kshotoku-q2632.csv@qe263_2:404",
     "gaku-jk2631.csv@qe263:404",
-    "gaku-mk2631.csv@qe263:404"
+    "gaku-mk2631.csv@qe263:404",
+    "kshotoku-q2631.csv@qe263:404"
    ]
   },
   "statjp": {
-   "ok": 1,
+   "ok": 2,
    "missing": []
   },
   "boj": {
@@ -45,13 +86,17 @@
    "ok": 1,
    "missing": []
   },
+  "watcher": {
+   "ok": 1,
+   "missing": []
+  },
   "ust": {
    "ok": 3,
    "missing": []
   }
  },
  "code_sha256": {
-  "manifest.py": "4416675c68a1801950e3c3d3ec118674f52db5ea26ee233581379e1258046cb0",
+  "manifest.py": "7c1c2a9d222d7592f589850e28154c7b013e74c031866ab295fdaa87c9b333a9",
   "fetch.py": "30fe591a85b50bc6e15ea99ddb45383fa549084005201fdc14d6efee65d21d11"
  }
 }
