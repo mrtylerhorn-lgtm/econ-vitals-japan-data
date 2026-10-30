@@ -3,7 +3,8 @@
 Usage:  python3 fetch.py PLAN_JSON RAWDIR
 Reads plan.json from manifest.py and writes RAWDIR/<src>/<key> exactly as collect.py
 would. Works only where the network can reach the source sites. Prints a report and
-exits 1 if any source is unreachable, so the caller can stop before building.
+exits 1 if any source is unreachable. A source is given up after 3 straight
+server errors or 15 minutes, and the rest of its files are marked skipped, so the caller can stop before building.
 """
 import json, os, re, sys, time, urllib.request, urllib.error
 from urllib.parse import urljoin
@@ -14,7 +15,7 @@ UA = {'User-Agent': 'Mozilla/5.0 (EconVitalsJapan weekly updater)'}
 def get(url):
     for attempt in range(3):
         try:
-            with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=60) as r:
+            with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=45) as r:
                 return r.status, r.read()
         except urllib.error.HTTPError as e:
             if e.code in (429, 500, 502, 503, 504) and attempt < 2:
@@ -27,8 +28,9 @@ def get(url):
 report, failed = {}, False
 for step in plan['steps']:
     src = step['src']; os.makedirs(os.path.join(raw, src), exist_ok=True)
-    ok, missing, unreachable = 0, [], False
+    ok, missing, unreachable, streak, t0 = 0, [], False, 0, time.time()
     for it in step['items']:
+        if streak >= 3 or time.time() - t0 > 900: unreachable = True
         if unreachable: missing.append(f"{it['key']}:skipped"); continue
         if ok >= step.get('max_ok', 999): break
         if os.path.exists(os.path.join(raw, src, it['key'])) and src == 'esri': continue
@@ -41,9 +43,10 @@ for step in plan['steps']:
         try:
             status, body = get(full)
         except Exception as e:
-            missing.append(f"{it['key']}:{type(e).__name__}"); unreachable = True; continue
+            missing.append(f"{it['key']}:{type(e).__name__}"); streak += 1; continue
         if status != 200:
-            missing.append(f"{it['key']}:{status}"); continue
+            missing.append(f"{it['key']}:{status}"); streak = streak + 1 if status >= 500 else 0; continue
+        streak = 0
         mode = it.get('mode', 'raw')
         if mode == 'lines':
             rx = re.compile(it['re'])
