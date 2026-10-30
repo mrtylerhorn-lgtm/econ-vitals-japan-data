@@ -1,0 +1,59 @@
+{
+ "run_date_jst": "2026-10-30",
+ "finished_utc": "2026-10-30T02:21:04+00:00",
+ "ok": false,
+ "data_replaced": false,
+ "report": {
+  "estat": {
+   "ok": 37,
+   "missing": []
+  },
+  "calendar": {
+   "ok": 1,
+   "missing": []
+  },
+  "esri": {
+   "ok": 2,
+   "missing": [
+    "gaku-jk2632.csv@qe263_2:404",
+    "gaku-mk2632.csv@qe263_2:404",
+    "gaku-jk2631.csv@qe263:404",
+    "gaku-mk2631.csv@qe263:404"
+   ]
+  },
+  "statjp": {
+   "ok": 1,
+   "missing": []
+  },
+  "boj": {
+   "ok": 2,
+   "missing": []
+  },
+  "bojapi": {
+   "ok": 6,
+   "missing": []
+  },
+  "mof": {
+   "ok": 2,
+   "missing": []
+  },
+  "jil": {
+   "ok": 1,
+   "missing": []
+  },
+  "nikkei": {
+   "ok": 1,
+   "missing": []
+  },
+  "fred": {
+   "ok": 0,
+   "missing": [
+    "dgs10:TimeoutError"
+   ]
+  }
+ },
+ "code_sha256": {
+  "manifest.py": "b94ec3a1168c567d57d38ad65121efa0b93df7f5b75509afafcc7037604dc8a6",
+  "fetch.py": "3c636155fa8a9fe54b744082cdee57cd31edecef1919cff9c39c76da41520ee6"
+ }
+}
