@@ -90,7 +90,7 @@
   
     
 
-      <ul class="links"><li hreflang="en" data-drupal-link-query="{&quot;endDay&quot;:&quot;20&quot;,&quot;endMonth&quot;:&quot;12&quot;,&quot;endYear&quot;:&quot;2026&quot;,&quot;page&quot;:&quot;1&quot;,&quot;startDay&quot;:&quot;31&quot;,&quot;startMonth&quot;:&quot;10&quot;,&quot;startYear&quot;:&quot;2026&quot;}" data-drupal-link-system-path="release-calendar" class="en"><a href="/en/release-calendar?endDay=20&amp;endMonth=12&amp;endYear=2026&amp;page=1&amp;startDay=31&amp;startMonth=10&amp;startYear=2026" class="language-link" hreflang="en" data-drupal-link-query="{&quot;endDay&quot;:&quot;20&quot;,&quot;endMonth&quot;:&quot;12&quot;,&quot;endYear&quot;:&quot;2026&quot;,&quot;page&quot;:&quot;1&quot;,&quot;startDay&quot;:&quot;31&quot;,&quot;startMonth&quot;:&quot;10&quot;,&quot;startYear&quot;:&quot;2026&quot;}" data-drupal-link-system-path="release-calendar">English</a></li><li hreflang="ja" data-drupal-link-query="{&quot;endDay&quot;:&quot;20&quot;,&quot;endMonth&quot;:&quot;12&quot;,&quot;endYear&quot;:&quot;2026&quot;,&quot;page&quot;:&quot;1&quot;,&quot;startDay&quot;:&quot;31&quot;,&quot;startMonth&quot;:&quot;10&quot;,&quot;startYear&quot;:&quot;2026&quot;}" data-drupal-link-system-path="release-calendar" class="ja is-active" aria-current="page"><a href="/release-calendar?endDay=20&amp;endMonth=12&amp;endYear=2026&amp;page=1&amp;startDay=31&amp;startMonth=10&amp;startYear=2026" class="language-link is-active" hreflang="ja" data-drupal-link-query="{&quot;endDay&quot;:&quot;20&quot;,&quot;endMonth&quot;:&quot;12&quot;,&quot;endYear&quot;:&quot;2026&quot;,&quot;page&quot;:&quot;1&quot;,&quot;startDay&quot;:&quot;31&quot;,&quot;startMonth&quot;:&quot;10&quot;,&quot;startYear&quot;:&quot;2026&quot;}" data-drupal-link-system-path="release-calendar" aria-current="page">Japanese</a></li></ul>
+      <ul class="links"><li hreflang="en" data-drupal-link-query="{&quot;endDay&quot;:&quot;27&quot;,&quot;endMonth&quot;:&quot;12&quot;,&quot;endYear&quot;:&quot;2026&quot;,&quot;page&quot;:&quot;1&quot;,&quot;startDay&quot;:&quot;7&quot;,&quot;startMonth&quot;:&quot;11&quot;,&quot;startYear&quot;:&quot;2026&quot;}" data-drupal-link-system-path="release-calendar" class="en"><a href="/en/release-calendar?endDay=27&amp;endMonth=12&amp;endYear=2026&amp;page=1&amp;startDay=7&amp;startMonth=11&amp;startYear=2026" class="language-link" hreflang="en" data-drupal-link-query="{&quot;endDay&quot;:&quot;27&quot;,&quot;endMonth&quot;:&quot;12&quot;,&quot;endYear&quot;:&quot;2026&quot;,&quot;page&quot;:&quot;1&quot;,&quot;startDay&quot;:&quot;7&quot;,&quot;startMonth&quot;:&quot;11&quot;,&quot;startYear&quot;:&quot;2026&quot;}" data-drupal-link-system-path="release-calendar">English</a></li><li hreflang="ja" data-drupal-link-query="{&quot;endDay&quot;:&quot;27&quot;,&quot;endMonth&quot;:&quot;12&quot;,&quot;endYear&quot;:&quot;2026&quot;,&quot;page&quot;:&quot;1&quot;,&quot;startDay&quot;:&quot;7&quot;,&quot;startMonth&quot;:&quot;11&quot;,&quot;startYear&quot;:&quot;2026&quot;}" data-drupal-link-system-path="release-calendar" class="ja is-active" aria-current="page"><a href="/release-calendar?endDay=27&amp;endMonth=12&amp;endYear=2026&amp;page=1&amp;startDay=7&amp;startMonth=11&amp;startYear=2026" class="language-link is-active" hreflang="ja" data-drupal-link-query="{&quot;endDay&quot;:&quot;27&quot;,&quot;endMonth&quot;:&quot;12&quot;,&quot;endYear&quot;:&quot;2026&quot;,&quot;page&quot;:&quot;1&quot;,&quot;startDay&quot;:&quot;7&quot;,&quot;startMonth&quot;:&quot;11&quot;,&quot;startYear&quot;:&quot;2026&quot;}" data-drupal-link-system-path="release-calendar" aria-current="page">Japanese</a></li></ul>
   </section>
 
 <section id="block-hetsutayoushangnahikeshiyon" class="block block-block-content block-block-content629e3678-b163-406c-9fa2-ffcc11eb4a7d header_nav clearfix">
@@ -631,7 +631,9 @@ document.getElementById("js-stat-preregister").style.pointerEvents = "none";
 
 <li class="stat-gnav-list-item js-gnav-list-item"><span class="stat-gnav-title js-gnav-title" tabindex="6">統計データの活用</span>
 <ul class="stat-gnav-list1 js-gnav-list1">
-  
+    <li class="stat-gnav-list1-item js-gnav-list1-item"><a class="stat-gnav-title js-gnav-title" href="https://dashboard.e-stat.go.jp/" target="_blank" rel="noopener">グラフ(統計ダッシュボード)</a></li>
+  <li class="stat-gnav-list1-item js-gnav-list1-item"><a class="stat-gnav-title js-gnav-title" href="https://dashboard.e-stat.go.jp/timeSeries" target="_blank" rel="noopener">時系列表(統計ダッシュボード)</a></li>
+
       <li class="stat-gnav-list1-item js-gnav-list1-item">
     <a class="stat-gnav-title js-gnav-title" href="/gis">地図</a>
     <ul class="stat-gnav-list2 js-gnav-list2">
@@ -1129,11 +1131,11 @@ window.addEventListener('DOMContentLoaded', function () {
     var firstYear = '2014';
 
     var defaltYear = '2026';
-    var defaltMonth = '10';
-    var defaltDay = '31';
+    var defaltMonth = '11';
+    var defaltDay = '7';
     var enddefaltYear = '2026';
-    var enddefaltMonth = '10';
-    var enddefaltDay = '31';
+    var enddefaltMonth = '11';
+    var enddefaltDay = '30';
     var script_root_url = 'https://www.e-stat.go.jp/modules/custom/stat_common/js/';
 
     //Enter時にクリックイベントを呼び出す
@@ -1387,9 +1389,9 @@ window.addEventListener('DOMContentLoaded', function () {
             <input type="hidden" id="sub_title_link" value="＜@year年@month月の公表予定＞">
 
             <div class="stat-announce-page-jump">
-                <button type="submit" name="page_month" value="202609" class="stat-announce-page-button js-prev-month" tabindex="14">＜前月</button>
-                <button type="submit" name="page_month" data-value="202610" value="202610" class="stat-announce-page-button stat-announce-border js-this-month" tabindex="14">当月</button>
-                <button type="submit" name="page_month" value="202611" class="stat-announce-page-button js-next-month" tabindex="14">次月＞</button>
+                <button type="submit" name="page_month" value="202610" class="stat-announce-page-button js-prev-month" tabindex="14">＜前月</button>
+                <button type="submit" name="page_month" data-value="202611" value="202611" class="stat-announce-page-button stat-announce-border js-this-month" tabindex="14">当月</button>
+                <button type="submit" name="page_month" value="202612" class="stat-announce-page-button js-next-month" tabindex="14">次月＞</button>
             </div>
             
                         <div class="stat-list-header">
@@ -1399,216 +1401,6 @@ window.addEventListener('DOMContentLoaded', function () {
             </div>
             <ul class="stat-list-body js-items">
             <p style="margin:0;"></p>
-                                        <li class="stat-list-row">
-                            <span class="stat-announce-keisaiday">
-                                2026-10月末                                                            </span>
-                            <span class="stat-announce-kikan">資源エネルギー庁</span>
-                            <span class="stat-announce-comment" data-toukei_cd="00551130" data-kensakuKouhyou_date="202610310000">
-                                <a tabindex="15" href="./release-calendar/detail/00551130/202610310000" target="_blank">
-                                    ガス事業生産動態統計調査 令和8年8月分(一般ガス,簡易ガス)
-                                </a>
-                            </span>
-                        </li>
-                                        <li class="stat-list-row">
-                            <span class="stat-announce-keisaiday">
-                                2026-11                                                            </span>
-                            <span class="stat-announce-kikan">消費者庁</span>
-                            <span class="stat-announce-comment" data-toukei_cd="00160011" data-kensakuKouhyou_date="202611010000">
-                                <a tabindex="15" href="./release-calendar/detail/00160011/202611010000" target="_blank">
-                                    民間事業者等における内部通報制度の実態調査 民間事業者等における内部通報制度の実態調査（2026年度）
-                                </a>
-                            </span>
-                        </li>
-                                        <li class="stat-list-row">
-                            <span class="stat-announce-keisaiday">
-                                2026-11                                                            </span>
-                            <span class="stat-announce-kikan">厚生労働省</span>
-                            <span class="stat-announce-comment" data-toukei_cd="00450045" data-kensakuKouhyou_date="202611010000">
-                                <a tabindex="15" href="./release-calendar/detail/00450045/202611010000" target="_blank">
-                                    中高年者縦断調査 第21回中高年者縦断調査（令和７年）
-                                </a>
-                            </span>
-                        </li>
-                                        <li class="stat-list-row">
-                            <span class="stat-announce-keisaiday">
-                                2026-11                                                            </span>
-                            <span class="stat-announce-kikan">厚生労働省</span>
-                            <span class="stat-announce-comment" data-toukei_cd="00450232" data-kensakuKouhyou_date="202611010000">
-                                <a tabindex="15" href="./release-calendar/detail/00450232/202611010000" target="_blank">
-                                    高校・中学新卒者の就職内定状況等 令和8年9月末現在
-                                </a>
-                            </span>
-                        </li>
-                                        <li class="stat-list-row">
-                            <span class="stat-announce-keisaiday">
-                                2026-11                                                            </span>
-                            <span class="stat-announce-kikan">厚生労働省</span>
-                            <span class="stat-announce-comment" data-toukei_cd="00450391" data-kensakuKouhyou_date="202611010000">
-                                <a tabindex="15" href="./release-calendar/detail/00450391/202611010000" target="_blank">
-                                    健康保険・船員保険被保険者実態調査 令和７年10月
-                                </a>
-                            </span>
-                        </li>
-                                        <li class="stat-list-row">
-                            <span class="stat-announce-keisaiday">
-                                2026-11                                                            </span>
-                            <span class="stat-announce-kikan">農林水産省</span>
-                            <span class="stat-announce-comment" data-toukei_cd="00500100" data-kensakuKouhyou_date="202611010000">
-                                <a tabindex="15" href="./release-calendar/detail/00500100/202611010000" target="_blank">
-                                    農林水産物輸出入統計 速報(農林水産物輸出入情報（令和８年９月分）)
-                                </a>
-                            </span>
-                        </li>
-                                        <li class="stat-list-row">
-                            <span class="stat-announce-keisaiday">
-                                2026-11                                                            </span>
-                            <span class="stat-announce-kikan">農林水産省</span>
-                            <span class="stat-announce-comment" data-toukei_cd="00500204" data-kensakuKouhyou_date="202611010000">
-                                <a tabindex="15" href="./release-calendar/detail/00500204/202611010000" target="_blank">
-                                    農業物価統計調査 速報（月別結果）(令和８年農業物価指数（令和２年基準） 令和８年10月)
-                                </a>
-                            </span>
-                        </li>
-                                        <li class="stat-list-row">
-                            <span class="stat-announce-keisaiday">
-                                2026-11                                                            </span>
-                            <span class="stat-announce-kikan">農林水産省</span>
-                            <span class="stat-announce-comment" data-toukei_cd="00500225" data-kensakuKouhyou_date="202611010000">
-                                <a tabindex="15" href="./release-calendar/detail/00500225/202611010000" target="_blank">
-                                    牛乳乳製品統計調査 速報（月別結果）(牛乳乳製品統計 令和８年10月分)
-                                </a>
-                            </span>
-                        </li>
-                                        <li class="stat-list-row">
-                            <span class="stat-announce-keisaiday">
-                                2026-11                                                            </span>
-                            <span class="stat-announce-kikan">農林水産省</span>
-                            <span class="stat-announce-comment" data-toukei_cd="00500227" data-kensakuKouhyou_date="202611010000">
-                                <a tabindex="15" href="./release-calendar/detail/00500227/202611010000" target="_blank">
-                                    畜産物流通調査 速報（月別結果）(食肉流通統計 令和８年10月分)
-                                </a>
-                            </span>
-                        </li>
-                                        <li class="stat-list-row">
-                            <span class="stat-announce-keisaiday">
-                                2026-11                                                            </span>
-                            <span class="stat-announce-kikan">農林水産省</span>
-                            <span class="stat-announce-comment" data-toukei_cd="00500228" data-kensakuKouhyou_date="202611010000">
-                                <a tabindex="15" href="./release-calendar/detail/00500228/202611010000" target="_blank">
-                                    水産物流通調査 速報（月別結果）(冷蔵水産物在庫量調査 令和８年９月分)
-                                </a>
-                            </span>
-                        </li>
-                                        <li class="stat-list-row">
-                            <span class="stat-announce-keisaiday">
-                                2026-11                                                            </span>
-                            <span class="stat-announce-kikan">農林水産省</span>
-                            <span class="stat-announce-comment" data-toukei_cd="00500508" data-kensakuKouhyou_date="202611010000">
-                                <a tabindex="15" href="./release-calendar/detail/00500508/202611010000" target="_blank">
-                                    牛乳乳製品の生産動向 牛乳乳製品の生産動向（令和８年１０月分）
-                                </a>
-                            </span>
-                        </li>
-                                        <li class="stat-list-row">
-                            <span class="stat-announce-keisaiday">
-                                2026-11                                                            </span>
-                            <span class="stat-announce-kikan">農林水産省</span>
-                            <span class="stat-announce-comment" data-toukei_cd="00500902" data-kensakuKouhyou_date="202611010000">
-                                <a tabindex="15" href="./release-calendar/detail/00500902/202611010000" target="_blank">
-                                    愛玩動物看護師就職状況等調査 令和８年愛玩動物看護師就職状況等調査結果
-                                </a>
-                            </span>
-                        </li>
-                                        <li class="stat-list-row">
-                            <span class="stat-announce-keisaiday">
-                                2026-11                                                            </span>
-                            <span class="stat-announce-kikan">水産庁</span>
-                            <span class="stat-announce-comment" data-toukei_cd="00502005" data-kensakuKouhyou_date="202611010000">
-                                <a tabindex="15" href="./release-calendar/detail/00502005/202611010000" target="_blank">
-                                    水産物流通調査 速報（月別結果）(冷蔵水産物在庫量調査 令和８年９月分)
-                                </a>
-                            </span>
-                        </li>
-                                        <li class="stat-list-row">
-                            <span class="stat-announce-keisaiday">
-                                2026-11月上旬                                                            </span>
-                            <span class="stat-announce-kikan">厚生労働省</span>
-                            <span class="stat-announce-comment" data-toukei_cd="00450011" data-kensakuKouhyou_date="202611010000">
-                                <a tabindex="15" href="./release-calendar/detail/00450011/202611010000" target="_blank">
-                                    人口動態調査 令和８年(　６月分 月報（概数）)
-                                </a>
-                            </span>
-                        </li>
-                                        <li class="stat-list-row">
-                            <span class="stat-announce-keisaiday">
-                                2026-11月上旬                                                            </span>
-                            <span class="stat-announce-kikan">厚生労働省</span>
-                            <span class="stat-announce-comment" data-toukei_cd="00450312" data-kensakuKouhyou_date="202611010000">
-                                <a tabindex="15" href="./release-calendar/detail/00450312/202611010000" target="_blank">
-                                    被保護者調査 令和８年度(月次調査（概数） 令和8年8月分)
-                                </a>
-                            </span>
-                        </li>
-                                        <li class="stat-list-row">
-                            <span class="stat-announce-keisaiday">
-                                2026-11月上旬                                                            </span>
-                            <span class="stat-announce-kikan">農林水産省</span>
-                            <span class="stat-announce-comment" data-toukei_cd="00500219" data-kensakuKouhyou_date="202611010000">
-                                <a tabindex="15" href="./release-calendar/detail/00500219/202611010000" target="_blank">
-                                    木材流通統計調査 速報（月別結果）(木材価格 令和８年10月)
-                                </a>
-                            </span>
-                        </li>
-                                        <li class="stat-list-row">
-                            <span class="stat-announce-keisaiday">
-                                2026-11月頃                                                            </span>
-                            <span class="stat-announce-kikan">文部科学省</span>
-                            <span class="stat-announce-comment" data-toukei_cd="00400203" data-kensakuKouhyou_date="202611010000">
-                                <a tabindex="15" href="./release-calendar/detail/00400203/202611010000" target="_blank">
-                                    21世紀出生児縦断調査（平成13年出生児） 令和7年(第24回21世紀出生児縦断調査（平成13年出生児）)
-                                </a>
-                            </span>
-                        </li>
-                                        <li class="stat-list-row">
-                            <span class="stat-announce-keisaiday">
-                                2026-11月頃                                                            </span>
-                            <span class="stat-announce-kikan">文部科学省</span>
-                            <span class="stat-announce-comment" data-toukei_cd="00400306" data-kensakuKouhyou_date="202611010000">
-                                <a tabindex="15" href="./release-calendar/detail/00400306/202611010000" target="_blank">
-                                    学校における教育の情報化の実態等に関する調査 令和7年度結果(確報値)
-                                </a>
-                            </span>
-                        </li>
-                                        <li class="stat-list-row">
-                            <span class="stat-announce-keisaiday">
-                                2026-11月頃                                                            </span>
-                            <span class="stat-announce-kikan">文部科学省</span>
-                            <span class="stat-announce-comment" data-toukei_cd="00400402" data-kensakuKouhyou_date="202611010000">
-                                <a tabindex="15" href="./release-calendar/detail/00400402/202611010000" target="_blank">
-                                    大学，短期大学，高等専門学校及び専修学校卒業予定者の就職内定状況等調査 令和8年度結果(令和8年10月1日現在)
-                                </a>
-                            </span>
-                        </li>
-                                        <li class="stat-list-row">
-                            <span class="stat-announce-keisaiday">
-                                2026-11月頃                                                            </span>
-                            <span class="stat-announce-kikan">厚生労働省</span>
-                            <span class="stat-announce-comment" data-toukei_cd="00450411" data-kensakuKouhyou_date="202611010000">
-                                <a tabindex="15" href="./release-calendar/detail/00450411/202611010000" target="_blank">
-                                    年金制度基礎調査 年金制度基礎調査（障害年金受給者実態調査）令和７年
-                                </a>
-                            </span>
-                        </li>
-                                        <li class="stat-list-row">
-                            <span class="stat-announce-keisaiday">
-                                2026-11-06                                08:30                            </span>
-                            <span class="stat-announce-kikan">厚生労働省</span>
-                            <span class="stat-announce-comment" data-toukei_cd="00450071" data-kensakuKouhyou_date="202611060830">
-                                <a tabindex="15" href="./release-calendar/detail/00450071/202611060830" target="_blank">
-                                    毎月勤労統計調査 全国調査(2026（令和８）年 ９月分,夏季賞与)
-                                </a>
-                            </span>
-                        </li>
                                         <li class="stat-list-row">
                             <span class="stat-announce-keisaiday">
                                 2026-11-09                                14:00                            </span>
@@ -1692,20 +1484,20 @@ window.addEventListener('DOMContentLoaded', function () {
                                         <li class="stat-list-row">
                             <span class="stat-announce-keisaiday">
                                 2026-11月中旬                                                            </span>
-                            <span class="stat-announce-kikan">厚生労働省</span>
-                            <span class="stat-announce-comment" data-toukei_cd="00450023" data-kensakuKouhyou_date="202611110000">
-                                <a tabindex="15" href="./release-calendar/detail/00450023/202611110000" target="_blank">
-                                    病院報告 病院報告（概数）(令和８年 ８月分)
+                            <span class="stat-announce-kikan">農林水産省</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00500215" data-kensakuKouhyou_date="202611110000">
+                                <a tabindex="15" href="./release-calendar/detail/00500215/202611110000" target="_blank">
+                                    作物統計 速報(作況調査（水陸稲） 作物統計調査 令和８年産水稲の作付面積及び10月25日現在の予想収穫量)
                                 </a>
                             </span>
                         </li>
                                         <li class="stat-list-row">
                             <span class="stat-announce-keisaiday">
                                 2026-11月中旬                                                            </span>
-                            <span class="stat-announce-kikan">農林水産省</span>
-                            <span class="stat-announce-comment" data-toukei_cd="00500215" data-kensakuKouhyou_date="202611110000">
-                                <a tabindex="15" href="./release-calendar/detail/00500215/202611110000" target="_blank">
-                                    作物統計 速報(作況調査（水陸稲） 作物統計調査 令和８年産水稲の作付面積及び10月25日現在の予想収穫量)
+                            <span class="stat-announce-kikan">国土交通省</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00600260" data-kensakuKouhyou_date="202611110000">
+                                <a tabindex="15" href="./release-calendar/detail/00600260/202611110000" target="_blank">
+                                    建設総合統計 令和8年9月分
                                 </a>
                             </span>
                         </li>
@@ -1891,6 +1683,16 @@ window.addEventListener('DOMContentLoaded', function () {
                         </li>
                                         <li class="stat-list-row">
                             <span class="stat-announce-keisaiday">
+                                2026-11月下旬                                                            </span>
+                            <span class="stat-announce-kikan">国土交通省</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00600270" data-kensakuKouhyou_date="202611210000">
+                                <a tabindex="15" href="./release-calendar/detail/00600270/202611210000" target="_blank">
+                                    建設工事費デフレーター 令和8年9月分
+                                </a>
+                            </span>
+                        </li>
+                                        <li class="stat-list-row">
+                            <span class="stat-announce-keisaiday">
                                 2026-11-24                                08:30                            </span>
                             <span class="stat-announce-kikan">総務省</span>
                             <span class="stat-announce-comment" data-toukei_cd="00200546" data-kensakuKouhyou_date="202611240830">
@@ -2053,9 +1855,29 @@ window.addEventListener('DOMContentLoaded', function () {
                             <span class="stat-announce-keisaiday">
                                 2026-11-30                                14:00                            </span>
                             <span class="stat-announce-kikan">国土交通省</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00600120" data-kensakuKouhyou_date="202611301400">
+                                <a tabindex="15" href="./release-calendar/detail/00600120/202611301400" target="_blank">
+                                    建築着工統計調査 建築着工統計調査(令和8年10月分)
+                                </a>
+                            </span>
+                        </li>
+                                        <li class="stat-list-row">
+                            <span class="stat-announce-keisaiday">
+                                2026-11-30                                14:00                            </span>
+                            <span class="stat-announce-kikan">国土交通省</span>
                             <span class="stat-announce-comment" data-toukei_cd="00600130" data-kensakuKouhyou_date="202611301400">
                                 <a tabindex="15" href="./release-calendar/detail/00600130/202611301400" target="_blank">
                                     建設工事統計調査 建設工事受注動態統計調査(令和8年10月分 大手50社)
+                                </a>
+                            </span>
+                        </li>
+                                        <li class="stat-list-row">
+                            <span class="stat-announce-keisaiday">
+                                2026-11-30                                14:00                            </span>
+                            <span class="stat-announce-kikan">国土交通省</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00600240" data-kensakuKouhyou_date="202611301400">
+                                <a tabindex="15" href="./release-calendar/detail/00600240/202611301400" target="_blank">
+                                    建築物滅失統計調査 建築物滅失統計調査(令和8年8月分)
                                 </a>
                             </span>
                         </li>
@@ -2461,6 +2283,16 @@ window.addEventListener('DOMContentLoaded', function () {
                         </li>
                                         <li class="stat-list-row">
                             <span class="stat-announce-keisaiday">
+                                2026-12-01                                14:00                            </span>
+                            <span class="stat-announce-kikan">総務省</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00200521" data-kensakuKouhyou_date="202612011400">
+                                <a tabindex="15" href="./release-calendar/detail/00200521/202612011400" target="_blank">
+                                    令和7年国勢調査 小地域集計(人口等基本集計に関する集計)
+                                </a>
+                            </span>
+                        </li>
+                                        <li class="stat-list-row">
+                            <span class="stat-announce-keisaiday">
                                 2026-12-02                                14:00                            </span>
                             <span class="stat-announce-kikan">内閣府</span>
                             <span class="stat-announce-comment" data-toukei_cd="00100405" data-kensakuKouhyou_date="202612021400">
@@ -2561,6 +2393,16 @@ window.addEventListener('DOMContentLoaded', function () {
                         </li>
                                         <li class="stat-list-row">
                             <span class="stat-announce-keisaiday">
+                                2026-12月中旬                                                            </span>
+                            <span class="stat-announce-kikan">国土交通省</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00600260" data-kensakuKouhyou_date="202612110000">
+                                <a tabindex="15" href="./release-calendar/detail/00600260/202612110000" target="_blank">
+                                    建設総合統計 令和8年10月分
+                                </a>
+                            </span>
+                        </li>
+                                        <li class="stat-list-row">
+                            <span class="stat-announce-keisaiday">
                                 2026-12-14                                13:30                            </span>
                             <span class="stat-announce-kikan">経済産業省</span>
                             <span class="stat-announce-comment" data-toukei_cd="00550200" data-kensakuKouhyou_date="202612141330">
@@ -2636,6 +2478,306 @@ window.addEventListener('DOMContentLoaded', function () {
                             <span class="stat-announce-comment" data-toukei_cd="00200573" data-kensakuKouhyou_date="202612180830">
                                 <a tabindex="15" href="./release-calendar/detail/00200573/202612180830" target="_blank">
                                     消費者物価指数 全国(2026年11月分)
+                                </a>
+                            </span>
+                        </li>
+                                        <li class="stat-list-row">
+                            <span class="stat-announce-keisaiday">
+                                2026-12月下旬                                                            </span>
+                            <span class="stat-announce-kikan">厚生労働省</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00450011" data-kensakuKouhyou_date="202612210000">
+                                <a tabindex="15" href="./release-calendar/detail/00450011/202612210000" target="_blank">
+                                    人口動態調査 令和８年(１０月分 速報)
+                                </a>
+                            </span>
+                        </li>
+                                        <li class="stat-list-row">
+                            <span class="stat-announce-keisaiday">
+                                2026-12月下旬                                                            </span>
+                            <span class="stat-announce-kikan">厚生労働省</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00450021" data-kensakuKouhyou_date="202612210000">
+                                <a tabindex="15" href="./release-calendar/detail/00450021/202612210000" target="_blank">
+                                    医療施設調査 医療施設動態調査(概数)(令和８年 10月分)
+                                </a>
+                            </span>
+                        </li>
+                                        <li class="stat-list-row">
+                            <span class="stat-announce-keisaiday">
+                                2026-12月下旬                                                            </span>
+                            <span class="stat-announce-kikan">厚生労働省</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00450041" data-kensakuKouhyou_date="202612210000">
+                                <a tabindex="15" href="./release-calendar/detail/00450041/202612210000" target="_blank">
+                                    社会福祉施設等調査 令和７（2025）年社会福祉施設等調査
+                                </a>
+                            </span>
+                        </li>
+                                        <li class="stat-list-row">
+                            <span class="stat-announce-keisaiday">
+                                2026-12月下旬                                                            </span>
+                            <span class="stat-announce-kikan">厚生労働省</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00450042" data-kensakuKouhyou_date="202612210000">
+                                <a tabindex="15" href="./release-calendar/detail/00450042/202612210000" target="_blank">
+                                    介護サービス施設・事業所調査 令和７（2025）年介護サービス施設・事業所調査
+                                </a>
+                            </span>
+                        </li>
+                                        <li class="stat-list-row">
+                            <span class="stat-announce-keisaiday">
+                                2026-12月下旬                                                            </span>
+                            <span class="stat-announce-kikan">厚生労働省</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00450072" data-kensakuKouhyou_date="202612210000">
+                                <a tabindex="15" href="./release-calendar/detail/00450072/202612210000" target="_blank">
+                                    労働経済動向調査 令和8(2026)年11月調査
+                                </a>
+                            </span>
+                        </li>
+                                        <li class="stat-list-row">
+                            <span class="stat-announce-keisaiday">
+                                2026-12月下旬                                                            </span>
+                            <span class="stat-announce-kikan">農林水産省</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00500215" data-kensakuKouhyou_date="202612210000">
+                                <a tabindex="15" href="./release-calendar/detail/00500215/202612210000" target="_blank">
+                                    作物統計 確報(作況調査（果樹）,作況調査（野菜）)
+                                </a>
+                            </span>
+                        </li>
+                                        <li class="stat-list-row">
+                            <span class="stat-announce-keisaiday">
+                                2026-12月下旬                                                            </span>
+                            <span class="stat-announce-kikan">農林水産省</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00500215" data-kensakuKouhyou_date="202612210000">
+                                <a tabindex="15" href="./release-calendar/detail/00500215/202612210000" target="_blank">
+                                    作物統計 速報(作況調査（工芸農作物） 作物統計調査 令和８年産なたね（子実用）の作付面積及び収穫量)
+                                </a>
+                            </span>
+                        </li>
+                                        <li class="stat-list-row">
+                            <span class="stat-announce-keisaiday">
+                                2026-12月下旬                                                            </span>
+                            <span class="stat-announce-kikan">農林水産省</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00500217" data-kensakuKouhyou_date="202612210000">
+                                <a tabindex="15" href="./release-calendar/detail/00500217/202612210000" target="_blank">
+                                    木材統計調査 速報（月別結果）(合板統計,製材統計)
+                                </a>
+                            </span>
+                        </li>
+                                        <li class="stat-list-row">
+                            <span class="stat-announce-keisaiday">
+                                2026-12月下旬                                                            </span>
+                            <span class="stat-announce-kikan">農林水産省</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00500248" data-kensakuKouhyou_date="202612210000">
+                                <a tabindex="15" href="./release-calendar/detail/00500248/202612210000" target="_blank">
+                                    野生鳥獣資源利用実態調査 確報(令和７年度野生鳥獣資源利用実態調査結果（食肉処理業者）)
+                                </a>
+                            </span>
+                        </li>
+                                        <li class="stat-list-row">
+                            <span class="stat-announce-keisaiday">
+                                2026-12月下旬                                                            </span>
+                            <span class="stat-announce-kikan">農林水産省</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00500304" data-kensakuKouhyou_date="202612210000">
+                                <a tabindex="15" href="./release-calendar/detail/00500304/202612210000" target="_blank">
+                                    油糧生産実績調査 速報（月別結果）(油糧生産実績 令和８年11月分)
+                                </a>
+                            </span>
+                        </li>
+                                        <li class="stat-list-row">
+                            <span class="stat-announce-keisaiday">
+                                2026-12月下旬                                                            </span>
+                            <span class="stat-announce-kikan">国土交通省</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00600270" data-kensakuKouhyou_date="202612210000">
+                                <a tabindex="15" href="./release-calendar/detail/00600270/202612210000" target="_blank">
+                                    建設工事費デフレーター 令和8年10月分
+                                </a>
+                            </span>
+                        </li>
+                                        <li class="stat-list-row">
+                            <span class="stat-announce-keisaiday">
+                                2026-12-21                                08:30                            </span>
+                            <span class="stat-announce-kikan">総務省</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00200546" data-kensakuKouhyou_date="202612210830">
+                                <a tabindex="15" href="./release-calendar/detail/00200546/202612210830" target="_blank">
+                                    サービス産業動態統計調査 2026年10月分(速報)
+                                </a>
+                            </span>
+                        </li>
+                                        <li class="stat-list-row">
+                            <span class="stat-announce-keisaiday">
+                                2026-12-21                                08:30                            </span>
+                            <span class="stat-announce-kikan">総務省</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00200546" data-kensakuKouhyou_date="202612210830">
+                                <a tabindex="15" href="./release-calendar/detail/00200546/202612210830" target="_blank">
+                                    サービス産業動態統計調査 2026年7月分(確報)
+                                </a>
+                            </span>
+                        </li>
+                                        <li class="stat-list-row">
+                            <span class="stat-announce-keisaiday">
+                                2026-12-21                                14:00                            </span>
+                            <span class="stat-announce-kikan">総務省</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00200524" data-kensakuKouhyou_date="202612211400">
+                                <a tabindex="15" href="./release-calendar/detail/00200524/202612211400" target="_blank">
+                                    人口推計 2026年12月分(2026年７月確定値、2026年12月概算値)
+                                </a>
+                            </span>
+                        </li>
+                                        <li class="stat-list-row">
+                            <span class="stat-announce-keisaiday">
+                                2026-12-23                                08:30                            </span>
+                            <span class="stat-announce-kikan">厚生労働省</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00450071" data-kensakuKouhyou_date="202612230830">
+                                <a tabindex="15" href="./release-calendar/detail/00450071/202612230830" target="_blank">
+                                    毎月勤労統計調査 全国調査(2026（令和８）年 10月分 確報)
+                                </a>
+                            </span>
+                        </li>
+                                        <li class="stat-list-row">
+                            <span class="stat-announce-keisaiday">
+                                2026-12-23                                14:00                            </span>
+                            <span class="stat-announce-kikan">総務省</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00200555" data-kensakuKouhyou_date="202612231400">
+                                <a tabindex="15" href="./release-calendar/detail/00200555/202612231400" target="_blank">
+                                    経済構造実態調査 2025年調査(四次集計結果 産業横断調査（企業等に関する集計）,産業横断調査（事業所に関する集計）)
+                                </a>
+                            </span>
+                        </li>
+                                        <li class="stat-list-row">
+                            <span class="stat-announce-keisaiday">
+                                2026-12-24                                14:00                            </span>
+                            <span class="stat-announce-kikan">内閣府</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00100406" data-kensakuKouhyou_date="202612241400">
+                                <a tabindex="15" href="./release-calendar/detail/00100406/202612241400" target="_blank">
+                                    景気動向指数 令和8年(10月分 速報からの改訂状況)
+                                </a>
+                            </span>
+                        </li>
+                                        <li class="stat-list-row">
+                            <span class="stat-announce-keisaiday">
+                                2026-12-24                                14:00                            </span>
+                            <span class="stat-announce-kikan">総務省</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00200523" data-kensakuKouhyou_date="202612241400">
+                                <a tabindex="15" href="./release-calendar/detail/00200523/202612241400" target="_blank">
+                                    住民基本台帳人口移動報告 月次結果(2026年11月分)
+                                </a>
+                            </span>
+                        </li>
+                                        <li class="stat-list-row">
+                            <span class="stat-announce-keisaiday">
+                                2026-12-25                                08:30                            </span>
+                            <span class="stat-announce-kikan">総務省</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00200531" data-kensakuKouhyou_date="202612250830">
+                                <a tabindex="15" href="./release-calendar/detail/00200531/202612250830" target="_blank">
+                                    労働力調査 2026年11月分(基本集計（2026年11月分）)
+                                </a>
+                            </span>
+                        </li>
+                                        <li class="stat-list-row">
+                            <span class="stat-announce-keisaiday">
+                                2026-12-25                                08:30                            </span>
+                            <span class="stat-announce-kikan">総務省</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00200571" data-kensakuKouhyou_date="202612250830">
+                                <a tabindex="15" href="./release-calendar/detail/00200571/202612250830" target="_blank">
+                                    小売物価統計調査 【動向編】主要品目の東京都区部小売価格及び全国統一価格品目の価格(2026年12月分)
+                                </a>
+                            </span>
+                        </li>
+                                        <li class="stat-list-row">
+                            <span class="stat-announce-keisaiday">
+                                2026-12-25                                08:30                            </span>
+                            <span class="stat-announce-kikan">総務省</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00200573" data-kensakuKouhyou_date="202612250830">
+                                <a tabindex="15" href="./release-calendar/detail/00200573/202612250830" target="_blank">
+                                    消費者物価指数 東京都区部（中旬速報値）(2026年12月分,2026年平均)
+                                </a>
+                            </span>
+                        </li>
+                                        <li class="stat-list-row">
+                            <span class="stat-announce-keisaiday">
+                                2026-12-25                                08:30                            </span>
+                            <span class="stat-announce-kikan">厚生労働省</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00450222" data-kensakuKouhyou_date="202612250830">
+                                <a tabindex="15" href="./release-calendar/detail/00450222/202612250830" target="_blank">
+                                    一般職業紹介状況（職業安定業務統計） 一般職業紹介状況(令和8年11月分)
+                                </a>
+                            </span>
+                        </li>
+                                        <li class="stat-list-row">
+                            <span class="stat-announce-keisaiday">
+                                2026-12-25                                08:30                            </span>
+                            <span class="stat-announce-kikan">厚生労働省</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00450223" data-kensakuKouhyou_date="202612250830">
+                                <a tabindex="15" href="./release-calendar/detail/00450223/202612250830" target="_blank">
+                                    雇用保険事業統計 令和8年11月分
+                                </a>
+                            </span>
+                        </li>
+                                        <li class="stat-list-row">
+                            <span class="stat-announce-keisaiday">
+                                2026-12-25                                09:30                            </span>
+                            <span class="stat-announce-kikan">財務省</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00350300" data-kensakuKouhyou_date="202612250930">
+                                <a tabindex="15" href="./release-calendar/detail/00350300/202612250930" target="_blank">
+                                    普通貿易統計 令和8年10月(月分（輸入確報）)
+                                </a>
+                            </span>
+                        </li>
+                                        <li class="stat-list-row">
+                            <span class="stat-announce-keisaiday">
+                                2026-12-25                                09:30                            </span>
+                            <span class="stat-announce-kikan">財務省</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00350300" data-kensakuKouhyou_date="202612250930">
+                                <a tabindex="15" href="./release-calendar/detail/00350300/202612250930" target="_blank">
+                                    普通貿易統計 令和8年11月(月分（輸出確報；輸入9桁速報）)
+                                </a>
+                            </span>
+                        </li>
+                                        <li class="stat-list-row">
+                            <span class="stat-announce-keisaiday">
+                                2026-12-25                                09:30                            </span>
+                            <span class="stat-announce-kikan">財務省</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00350310" data-kensakuKouhyou_date="202612250930">
+                                <a tabindex="15" href="./release-calendar/detail/00350310/202612250930" target="_blank">
+                                    特殊貿易統計 令和8年11月(確報)
+                                </a>
+                            </span>
+                        </li>
+                                        <li class="stat-list-row">
+                            <span class="stat-announce-keisaiday">
+                                2026-12-25                                09:30                            </span>
+                            <span class="stat-announce-kikan">財務省</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00350320" data-kensakuKouhyou_date="202612250930">
+                                <a tabindex="15" href="./release-calendar/detail/00350320/202612250930" target="_blank">
+                                    船舶・航空機統計 令和8年11月(確報)
+                                </a>
+                            </span>
+                        </li>
+                                        <li class="stat-list-row">
+                            <span class="stat-announce-keisaiday">
+                                2026-12-25                                14:00                            </span>
+                            <span class="stat-announce-kikan">国土交通省</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00600120" data-kensakuKouhyou_date="202612251400">
+                                <a tabindex="15" href="./release-calendar/detail/00600120/202612251400" target="_blank">
+                                    建築着工統計調査 建築着工統計調査(令和8年11月分)
+                                </a>
+                            </span>
+                        </li>
+                                        <li class="stat-list-row">
+                            <span class="stat-announce-keisaiday">
+                                2026-12-25                                14:00                            </span>
+                            <span class="stat-announce-kikan">国土交通省</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00600130" data-kensakuKouhyou_date="202612251400">
+                                <a tabindex="15" href="./release-calendar/detail/00600130/202612251400" target="_blank">
+                                    建設工事統計調査 建設工事受注動態統計調査(令和8年11月分 大手50社)
+                                </a>
+                            </span>
+                        </li>
+                                        <li class="stat-list-row">
+                            <span class="stat-announce-keisaiday">
+                                2026-12-25                                14:00                            </span>
+                            <span class="stat-announce-kikan">国土交通省</span>
+                            <span class="stat-announce-comment" data-toukei_cd="00600240" data-kensakuKouhyou_date="202612251400">
+                                <a tabindex="15" href="./release-calendar/detail/00600240/202612251400" target="_blank">
+                                    建築物滅失統計調査 建築物滅失統計調査(令和8年9月分)
                                 </a>
                             </span>
                         </li>
@@ -2972,8 +3114,8 @@ window.addEventListener('DOMContentLoaded', function () {
                                                                                                                                             <option value=7>7月</option>
                                                                                                                                             <option value=8>8月</option>
                                                                                                                                             <option value=9>9月</option>
-                                                                                                                                                                                                                        <option value=10 selected=&#039;selected&#039;>10月</option>
-                                                                                                                                            <option value=11>11月</option>
+                                                                                                                                            <option value=10>10月</option>
+                                                                                                                                                                                                                        <option value=11 selected=&#039;selected&#039;>11月</option>
                                                                                                                                             <option value=12>12月</option>
                                                             </select>
                             <select name="startDay" class="stat-piker-day-start js-piker-day-start" data-alias="dp_day1" id="stat-piker-date-start" tabindex="9">
@@ -2984,7 +3126,7 @@ window.addEventListener('DOMContentLoaded', function () {
                                                                                                                                             <option value=4>4日</option>
                                                                                                                                             <option value=5>5日</option>
                                                                                                                                             <option value=6>6日</option>
-                                                                                                                                            <option value=7>7日</option>
+                                                                                                                                                                                                                        <option value=7 selected=&#039;selected&#039;>7日</option>
                                                                                                                                             <option value=8>8日</option>
                                                                                                                                             <option value=9>9日</option>
                                                                                                                                             <option value=10>10日</option>
@@ -3008,7 +3150,7 @@ window.addEventListener('DOMContentLoaded', function () {
                                                                                                                                             <option value=28>28日</option>
                                                                                                                                             <option value=29>29日</option>
                                                                                                                                             <option value=30>30日</option>
-                                                                                                                                                                                                                        <option value=31 selected=&#039;selected&#039;>31日</option>
+                                                                                                                                            <option value=31>31日</option>
                                                             </select>
                             <span class="stat-piker-open-start js-piker-open-start">
                                 <i aria-hidden="true" class="fa fa-calendar stat-cursor-pointer" data-alias="an-calender-start" tabindex="9"></i>
@@ -3069,14 +3211,14 @@ window.addEventListener('DOMContentLoaded', function () {
                                                                                                                                             <option value=17>17日</option>
                                                                                                                                             <option value=18>18日</option>
                                                                                                                                             <option value=19>19日</option>
-                                                                                                                                                                                                                        <option value=20 selected=&#039;selected&#039;>20日</option>
+                                                                                                                                            <option value=20>20日</option>
                                                                                                                                             <option value=21>21日</option>
                                                                                                                                             <option value=22>22日</option>
                                                                                                                                             <option value=23>23日</option>
                                                                                                                                             <option value=24>24日</option>
                                                                                                                                             <option value=25>25日</option>
                                                                                                                                             <option value=26>26日</option>
-                                                                                                                                            <option value=27>27日</option>
+                                                                                                                                                                                                                        <option value=27 selected=&#039;selected&#039;>27日</option>
                                                                                                                                             <option value=28>28日</option>
                                                                                                                                             <option value=29>29日</option>
                                                                                                                                             <option value=30>30日</option>
@@ -3446,8 +3588,18 @@ window.addEventListener('DOMContentLoaded', function () {
                     </li>
                                     <li class="filter-list-cont-item js-list-cont-item js-toukei fix"
                         data-key="toukeiCd"
+                        data-value="00170100" tabindex="13">
+                        <span class="filter-list-cont-item-title">こどもの福祉と保健に関する状況報告</span>
+                    </li>
+                                    <li class="filter-list-cont-item js-list-cont-item js-toukei fix"
+                        data-key="toukeiCd"
                         data-value="00190001" tabindex="13">
                         <span class="filter-list-cont-item-title">個人情報取扱事業者における個人情報等の安全管理措置に関する実態調査</span>
+                    </li>
+                                    <li class="filter-list-cont-item js-list-cont-item js-toukei fix"
+                        data-key="toukeiCd"
+                        data-value="00200502" tabindex="13">
+                        <span class="filter-list-cont-item-title">社会・人口統計体系</span>
                     </li>
                                     <li class="filter-list-cont-item js-list-cont-item js-toukei fix"
                         data-key="toukeiCd"
@@ -5083,6 +5235,8 @@ window.addEventListener('DOMContentLoaded', function () {
 <h2>統計データの活用</h2>
 
 <ul>
+	<li><a href="https://dashboard.e-stat.go.jp/" rel="noopener" tabindex="1011" target="_blank">グラフ(統計ダッシュボード)</a></li>
+	<li><a href="https://dashboard.e-stat.go.jp/timeSeries" rel="noopener" tabindex="1011" target="_blank">時系列表(統計ダッシュボード)</a></li>
 	<li><a href="/gis" tabindex="1012">統計地理情報システム</a></li>
 	<li><a href="/gis/statmap-search?type=1" tabindex="1013">統計データダウンロード</a></li>
 	<li><a href="/gis/statmap-search?type=2" tabindex="1014">境界データダウンロード</a></li>
@@ -5162,7 +5316,7 @@ window.addEventListener('DOMContentLoaded', function () {
   </div>
 
     
-    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"release-calendar","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"ja","currentQuery":{"endDay":"20","endMonth":"12","endYear":"2026","page":"1","startDay":"31","startMonth":"10","startYear":"2026"}},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"matomo":{"disableCookies":false,"trackColorbox":false,"trackMailto":true},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click"},"user":{"uid":0,"permissionsHash":"1536d9d4247482a79691617aa14f3fc22d9a8087226025a949cd59b71f61d614"}}</script>
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"release-calendar","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"ja","currentQuery":{"endDay":"27","endMonth":"12","endYear":"2026","page":"1","startDay":"7","startMonth":"11","startYear":"2026"}},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"matomo":{"disableCookies":false,"trackColorbox":false,"trackMailto":true},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click"},"user":{"uid":0,"permissionsHash":"1536d9d4247482a79691617aa14f3fc22d9a8087226025a949cd59b71f61d614"}}</script>
 <script src="/core/assets/vendor/underscore/underscore-min.js?v=1.13.8"></script>
 <script src="/sites/default/files/languages/ja_aT0DThoJCkaLHQSeMpSdaRwuESs0RiaWKaObbv1TNmQ.js?tmwpp8"></script>
 <script src="/core/misc/drupalSettingsLoader.js?v=10.6.19"></script>
