@@ -1,6 +1,6 @@
 {
- "run_date_jst": "2026-11-14",
- "finished_utc": "2026-11-14T02:01:38+00:00",
+ "run_date_jst": "2026-11-21",
+ "finished_utc": "2026-11-21T02:12:46+00:00",
  "ok": true,
  "data_replaced": true,
  "stale_sources": [],
@@ -18,10 +18,7 @@
    "missing": [
     "gaku-jk2632.csv@qe263_2:404",
     "gaku-mk2632.csv@qe263_2:404",
-    "kshotoku-q2632.csv@qe263_2:404",
-    "gaku-jk2631.csv@qe263:404",
-    "gaku-mk2631.csv@qe263:404",
-    "kshotoku-q2631.csv@qe263:404"
+    "kshotoku-q2632.csv@qe263_2:404"
    ]
   },
   "statjp": {
